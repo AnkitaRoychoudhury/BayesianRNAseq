@@ -40,7 +40,6 @@ def model(s_spike, G, s_seq_obs, x_seq_obs, mu_b_sigma=1, sigma_b_sigma=0.5,
     
     """
     K = len(s_spike)
-    #G = len(x_seq_obs)
     
     mu_b = numpyro.sample("mu_b", dist.Normal(0, mu_b_sigma))
     sigma_b = numpyro.sample("sigma_b", dist.HalfNormal(sigma_b_sigma))
